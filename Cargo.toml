@@ -1,0 +1,24 @@
+[package]
+name = "instapaper"
+version = "0.1.0"
+authors = ["Simon Eskildsen <sirup@sirupsen.com>"]
+license = "MIT"
+include = ["src/**/*", "Cargo.toml"]
+description = "Instapaper API wrapper."
+documentation = "https://github.com/sirupsen/instapaper-rs"
+homepage = "https://github.com/sirupsen/instapaper-rs"
+repository = "https://github.com/sirupsen/instapaper-rs"
+readme = "README.md"
+
+[dependencies]
+oauth1 = '0.3.0'
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
+reqwest = "0.9"
+url = "1.7"
+failure = "0.1"
+
+[dev-dependencies]
+mockito = ""
+dotenv = ""
