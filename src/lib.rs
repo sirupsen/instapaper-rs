@@ -195,8 +195,8 @@ impl Client {
     pub fn verify(&self) -> Result<User> {
         let params = HashMap::new();
         let mut response = signed_request("account/verify_credentials", params, self)?;
-        let users: Vec<User> = response.json()?;
-        Ok(users[0].clone())
+        let mut users: Vec<User> = response.json()?;
+        Ok(users.remove(0))
     }
 
     /// Move a `Bookmark` to the archive folder.
@@ -205,8 +205,8 @@ impl Client {
         let mut params: HashMap<&str, Cow<str>> = HashMap::new();
         params.insert("bookmark_id", Cow::Borrowed(&bookmark_id_string));
         let mut response = signed_request("bookmarks/archive", params, self)?;
-        let bookmarks: Vec<Bookmark> = response.json()?;
-        Ok(bookmarks[0].clone())
+        let mut bookmarks: Vec<Bookmark> = response.json()?;
+        Ok(bookmarks.remove(0))
     }
 
     /// List all bookmarks and highlights in a folder. You'll need to obtain the folder id through either the API
@@ -237,8 +237,8 @@ impl Client {
         }
 
         let mut response = signed_request("bookmarks/add", params, self)?;
-        let bookmarks: Vec<Bookmark> = response.json()?;
-        Ok(bookmarks[0].clone())
+        let mut bookmarks: Vec<Bookmark> = response.json()?;
+        Ok(bookmarks.remove(0))
     }
 }
 
