@@ -5,6 +5,10 @@ Rust wrapper for the Instapaper public API.  The official API's documentation ca
 to access the API you must fill out [this
 form](https://www.instapaper.com/main/request_oauth_consumer_token). See the `Client` struct for all methods made available.
 
+### Installation
+
+Add `instapaper = "*"` to your `Cargo.toml`.
+
 ### Example
 
 ```rust

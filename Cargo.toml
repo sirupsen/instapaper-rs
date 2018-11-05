@@ -20,5 +20,5 @@ url = "1.7"
 failure = "0.1"
 
 [dev-dependencies]
-mockito = ""
-dotenv = ""
+mockito = "0.13"
+dotenv = "0.13"
