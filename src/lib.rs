@@ -83,7 +83,7 @@ const URL: &str = "https://www.instapaper.com";
 #[cfg(test)]
 const URL: &str = mockito::SERVER_URL;
 
-type Result<T> = std::result::Result<T, Error>;
+pub type Result<T> = std::result::Result<T, Error>;
 
 /// The client instance to perform actions on. The `consumer_key` and `consumer_secret` are
 /// obtained through Instapaper's API documentation. The `oauth_key` and `oauth_secret` are
