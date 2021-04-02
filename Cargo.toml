@@ -1,6 +1,6 @@
 [package]
 name = "instapaper"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Simon Eskildsen <sirup@sirupsen.com>"]
 license = "MIT"
 include = ["src/**/*", "Cargo.toml"]
@@ -10,8 +10,11 @@ homepage = "https://github.com/sirupsen/instapaper-rs"
 repository = "https://github.com/sirupsen/instapaper-rs"
 readme = "README.md"
 
+[patch.crates-io]
+oauth1 = { git = "https://github.com/sirupsen/oauth1-rs", branch = "fix-ring-dep" }
+
 [dependencies]
-oauth1 = '0.3.0'
+oauth1 = "1.0.0"
 serde = "1.0"
 serde_json = "1.0"
 serde_derive = "1.0"
